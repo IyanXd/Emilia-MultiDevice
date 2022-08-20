@@ -1,5 +1,5 @@
 {
-    "name": "Elaina-BOT",
+    "name": "Emilia-BOT",
     "version": "3.0.0",
     "description": "RPG BOT Whatsapp",
     "main": "index.js",
@@ -28,7 +28,7 @@
     ],
     "homepage": "https://github.com/ImYanXiao/Elaina-MultiDevice",
     "author": {
-        "name": "ImYanXiao"
+        "name": "ImIyanXiao"
     },
     "repository": {
         "type": "git",
