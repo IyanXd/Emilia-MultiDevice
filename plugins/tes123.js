@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 
-let info = `Elaina Disini (｡>_<｡)`
+let info = `Emilia Disini (｡>_<｡)`
 
 
 
@@ -12,9 +12,9 @@ let td = 'application/vnd.openxmlformats-officedocument.wordprocessingml.documen
 
 
 conn.reply(m.chat, info, m, { quoted: fkontak },{ contextInfo: { externalAdReply: { showAdAttribution: true,
-      mediaUrl: "https://Instagram.com/Xiao_yan_21",
+      mediaUrl: "https://Instagram.com/yanxd81",
       mediaType: 2,
-      description: "https://Instagram.com/Xiao_yan_21", 
+      description: "https://Instagram.com/yanxd81", 
       title: global.titlebot,
       body: wm,
       thumbnail: thumb,
@@ -22,7 +22,7 @@ conn.reply(m.chat, info, m, { quoted: fkontak },{ contextInfo: { externalAdReply
 
 }
 
-handler.customPrefix = /^(tes|bot|elaina)$/i
+handler.customPrefix = /^(tes|bot|emilia)$/i
 
 handler.command = new RegExp
 

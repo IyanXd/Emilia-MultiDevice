@@ -54,8 +54,8 @@ https://github.com/Aiinne
 *❉ Papah-Chan:*
 https://github.com/FahriAdison
 *▸ - - - —「 Penulis Ulang 」— - - - ◂*
-*❉ ImYanXiao:*
-https://github.com/ImYanXiao
+*❉ ImIyanXiao:*
+https://github.com/IyanXd
 *▸ - - - —「 Thanks For Suhu 」— - - - ◂*
 *❉ Kannachan:*
 *❉ The.sadboy01
@@ -66,10 +66,10 @@ https://github.com/ImYanXiao
 
 `
 conn.sendButtonDoc(m.chat, tqto, wm,'Thanks','Bilek', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: "https://Instagram.com/Xiao_yan_21",
+    mediaUrl: "https://Instagram.com/yanxd81",
     mediaType: "VIDEO",
-    description: "https://Instagram.com/Xiao_yan_21", 
-    title: 'Kanna-MultiDevice',
+    description: "https://Instagram.com/yanxd81", 
+    title: 'Emilia-MultiDevice',
     body: wm,
     thumbnail: thumb,
     sourceUrl: sgc

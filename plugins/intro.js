@@ -11,7 +11,7 @@ m.reply(`
 │ *Kelas      :* 
 │ *Asal         :* 
 │ *Agama    :* 
- |  *Status     :* 
+│ *Status    :* 
 ╰═════ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙
 `.trim()) // Tambah sendiri kalo mau
 }

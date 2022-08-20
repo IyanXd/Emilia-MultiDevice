@@ -45,19 +45,19 @@ handler.all = async function (m) {
 					title: global.ucapan,
 					body: wm,
 					mediaUrl: sgc,
-					description: 'Elaina-MultiDevice',
+					description: 'Emilia-MultiDevice',
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(urls)).buffer(),
-					sourceUrl: "https://github.com/ImYanXiao",					
+					sourceUrl: "https://github.com/IyanXd",					
 				}
 			}
 		}
 		global.fakeig = {
          contextInfo: { externalAdReply: { showAdAttribution: true,
-            mediaUrl: "https://Instagram.com/Xiao_yan_21",
+            mediaUrl: "https://Instagram.com/yanxd81",
             mediaType: "VIDEO",
-            description: "https://Instagram.com/Xiao_yan_21", 
-            title: 'Elaina-MultiDevice',
+            description: "https://Instagram.com/yanxd81", 
+            title: 'Emilia-MultiDevice',
             body: wm,
             thumbnailUrl: pp,
             sourceUrl: sgc
@@ -68,7 +68,7 @@ global.fakefb = {
             mediaUrl: "https://Facebook.com/Fay.cats.Kun",
             mediaType: "VIDEO",
             description: "https://www.Facebook.com/Fay.cats.kun", 
-            title: 'Elaina-MultiDevice',
+            title: 'Emilia-MultiDevice',
             body: wm,
             thumbnailUrl: pp,
             sourceUrl: sgc
@@ -112,7 +112,7 @@ global.fakefb = {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat  ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "caption":"by : ImYanXiao","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+            message: { "liveLocationMessage": { "caption":"by : ImIyanXiao","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
                
                   global.fliveLoc2 = {
@@ -120,13 +120,13 @@ global.fakefb = {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "title": "ImYanXiao","h": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+            message: { "liveLocationMessage": { "title": "ImIyanXiao","h": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
                
                    global.ftoko = {
        key: {
                    fromMe: false,
-                   participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "6285736178354@s.whatsapp.net" } : {})
+                   participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "62895323413434@s.whatsapp.net" } : {})
                },
                message: {
                    "productMessage": {
@@ -136,7 +136,7 @@ global.fakefb = {
                                "jpegThumbnail": fs.readFileSync('./thumbnail.jpg') //Gambarnye
                            },
                            "title": wm, //Kasih namalu 
-                           "description": "Elaina-MultiDevice", 
+                           "description": "Emilia-MultiDevice", 
                            "currencyCode": "USD",
                            "priceAmount1000": "20000000",
                            "retailerId": "Ghost",
@@ -169,7 +169,7 @@ global.fakefb = {
                "groupInviteMessage": {
                    "groupJid": "6285736178354-1625305606@g.us",
                    "inviteCode": "null",
-                   "groupName": "Kawan Elaina", 
+                   "groupName": "Kawan Emilia", 
                    "caption": wm, 
                    'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                }

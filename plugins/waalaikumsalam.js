@@ -5,10 +5,10 @@ let info = `Waalaikumsalam`
 
 let td = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 conn.reply(m.chat, info, m, { quoted: fkontak },{ contextInfo: { externalAdReply: { showAdAttribution: true,
-      mediaUrl: "https://github.com/ImYanXiao",
+      mediaUrl: "https://github.com/IyanXd",
       mediaType: 2,
-      description: "https://github.com/ImYanXiao", 
-      title: 'ᴇʟᴀɪɴᴀ-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ',
+      description: "https://github.com/IyanXd", 
+      title: 'ᴇᴍɪʟɪᴀ-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ',
       body: wm,
       thumbnail: thumb,
       sourceUrl: sig  }}})
