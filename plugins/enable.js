@@ -5,16 +5,15 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	rows: [
 	    {title: "✨ | Welcome", rowId: `${usedPrefix + command} welcome`},
 	    {title: "🚫 | Delete", rowId: `${usedPrefix + command} delete`},
-	    {title: "👁 | Antiviewonce", rowId: `${usedPrefix + command} antiviewonce`}, 
 	    {title: "🌎 | Public", rowId: `${usedPrefix + command} public`},
 	{title: "🗣️ | Simi", rowId: `${usedPrefix + command} simi`},
 	{title: "🔞 | Nsfw", rowId: `${usedPrefix + command} nsfw`},
 	{title: "🌟 | PremNsfwChat", rowId: `${usedPrefix + command} premnsfwchat`},
 	{title: "🔗 | Antilink", rowId: `${usedPrefix + command} antilink`},
+    {title: "👁️ | Antiviewonce", rowId: `${usedPrefix + command} antiviewonce`},
+    {title: "🚧 | Antisticker", rowId: `${usedPrefix + command} sticker`},
 	{title: "🚫 | Antidelete", rowId: `${usedPrefix + command} antidelete`},
 	{title: "📛 | Antitoxic", rowId: `${usedPrefix + command} antitoxic`},
-	{title: "📞 | Anticall", rowId: `$usedPrefix + command} anticall`}, 
-	{title: "🖼 | Autosticker", rowId: `${usedPrefix + command} stiker`}, 
 	{title: "⏏️ | Autolevelup", rowId: `${usedPrefix + command} autolevelup`},
 	{title: "🔎 | Detect", rowId: `${usedPrefix + command} detect`},
 	{title: "📑 | Document", rowId: `${usedPrefix + command} document`},
@@ -25,13 +24,14 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	{title: "💬 | PcOnly", rowId: `${usedPrefix + command} pconly`},
 	{title: "🏢 | GcOnly", rowId: `${usedPrefix + command} gconly`},
 	{title: "📷 | SwOnly", rowId: `${usedPrefix + command} swonly`},
+	]
     },
 ]
 
 const listMessage = {
   text: ' ',
   footer: botdate,
-  title: `*${htki} 𝙾𝙿𝚃𝙸𝙾𝙽𝚂 ${htka}*`,
+  title: `*${htki} OPTIONS ${htka}*`,
   buttonText: "Click Here!",
   sections
 }
@@ -67,23 +67,6 @@ const listMessage = {
        }
        chat.detect = isEnable
        break
-           case 'viewonce':
-    case 'antiviewonce':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
-          throw false
-        }
-      }
-      chat.viewonce = isEnable
-      break
-    case 'antidelete':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
-          throw false
-        }
-      }
     case 'delete':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
@@ -131,15 +114,22 @@ const listMessage = {
       }
       chat.antiLink = isEnable
       break
-     //case 'autosticker':
-     //if (m.isGroup) {
-       //if (!(isAdmin || isOwner)) {
-         //global.dfail('admin', m, conn)
-     //     throw false
-      //  }
-    //  }
-    // chat.autosticker = isEnable
+    case 'sticker':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.sticker = isEnable
       break
+    case 'antiviewonce':
+      if (!isAdmin) {
+        global.dfail('admin', m, conn)
+        throw false
+        }
+       chat.viewonce = isEnable
+       break
       case 'simi':
         if (!isROwner) {
           global.dfail('rowner', m, conn)
@@ -163,28 +153,28 @@ const listMessage = {
         }}
       chat.premnsfw = isEnable
       break
-    // case 'toxic':
-    //   if (m.isGroup) {
-    //     if (!(isAdmin || isOwner)) {
-    //       global.dfail('admin', m, conn)
-    //       throw false
-    //     }
-    //   }
-    //   chat.antiToxic = !isEnable
+     //case 'toxic':
+     //  if (m.isGroup) {
+     //    if (!(isAdmin || isOwner)) {
+     //      global.dfail('admin', m, conn)
+     //      throw false
+     //    }
+     //  }
+     //  chat.antiToxic = !isEnable
+     //  break
+     case 'antitoxic':
+       if (m.isGroup) {
+         if (!(isAdmin || isOwner)) {
+           global.dfail('admin', m, conn)
+           throw false
+         }
+       }
+       chat.antiToxic = isEnable
+       break
+    // case 'autolevelup':
+    //   isUser = true
+    //   user.autolevelup = isEnable
     //   break
-    case 'antitoxic':
-     if (m.isGroup) {
-      if (!(isAdmin || isOwner)) {
-      global.dfail('admin', m, conn)
-      throw false
-     }
-     }
-    chat.antiToxic = isEnable
-     break
-    case 'autolevelup':
-    isUser = true
-    user.autolevelup = isEnable
-     break
     // case 'mycontact':
     // case 'mycontacts':
     // case 'whitelistcontact':
@@ -221,11 +211,6 @@ const listMessage = {
       }
       global.opts['autoread'] = isEnable
       break
-      case 'anticall':
-      isAll = true
-      if (!isOwner) return dfail('owner', m, conn)
-      setting.anticall = isEnable
-      break
     case 'pconly':
     case 'privateonly':
       isAll = true
@@ -257,12 +242,12 @@ const listMessage = {
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage)
       throw false
   }
-  conn.sendButton(m.chat, `*${htki} 𝙾𝙿𝚃𝙸𝙾𝙽𝚂 ${htka}*
-🗂️ *ᴛʏᴘᴇ:* ${type} 
-📊 *sᴛᴀᴛᴜs:* Succes ✅
-🎚️ *ᴏᴘᴛɪᴏɴs:* ${isEnable ? 'Enable' : 'Disable'}
-📣 *ғᴏʀ:* ${isAll ? 'This Bot' : isUser ? '' : 'This Chats'}
-`,wm, null, [[`${isEnable ? '✖️ ᴅɪsᴀʙʟᴇ' : '✔️ ᴇɴᴀʙʟᴇ'}`, `${isEnable ? `.off ${type}` : `.on ${type}`}`], ['🎀 ᴍᴇɴᴜ', '.menu']],m)
+  conn.sendButton(m.chat, `*${htki} OPTIONS ${htka}*
+🗂️ *Type:* ${type} 
+📊 *Status:* Succes ✅
+🎚️ *Options:* ${isEnable ? 'Enable' : 'Disable'}
+📣 *For:* ${isAll ? 'This Bot' : isUser ? '' : 'This Chats'}
+`,wm, null, [[`${isEnable ? '✖️ Disable' : '✔️ Enable'}`, `${isEnable ? `.off ${type}` : `.on ${type}`}`], ['🎀 Menu', '.menu']],m)
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
